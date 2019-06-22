@@ -1,16 +1,20 @@
 .Header {
-  width: 100%;
-  box-shadow: 0 0 10px #ccc;
-  box-sizing: border-box;
-  padding: 20px 40px;
+    width: 100%;
+    box-shadow: 0 0 10px #ccc;
+    box-sizing: border-box;
+    padding: 20px 40px;
 
-  a {
-    color: #333;
-    text-decoration: none;
-    transition: 0.3s;
-
-    &:hover {
-      opacity: 0.6;
+    * {
+        font-family: 'Arial';
     }
-  }
+
+    a {
+        color: #333;
+        text-decoration: none;
+        transition: 0.3s;
+
+        &:hover {
+            opacity: 0.6;
+        }
+    }
 }
