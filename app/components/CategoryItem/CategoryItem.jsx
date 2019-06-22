@@ -1,9 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import './CategoryItem.scss';
 
-export default ({ name }) => {
+const CategoryItem = ({ name, id }) => {
     return (
-        <section>
-            <p> {name} </p>
+        <section className="CategoryItem">
+            <Link to={`/category/${id}`}> {name} </Link>
         </section>
     );
 };
+
+export default React.memo(CategoryItem);
