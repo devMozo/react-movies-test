@@ -7,7 +7,7 @@ const getAllCategories = () => {
             'Access-Control-Allow-Origin': '*',
         },
     })
-        .then(response => console.log(response))
+        .then(response => response.data.genres)
         .catch(err => err);
 };
 
