@@ -1,8 +1,9 @@
 import React from 'react';
 import { MOVIES_IMG_PATH } from '../../constants/config';
+import PropTypes from 'prop-types';
 import './FullMovie.scss';
 
-export default ({ movie }) => {
+const FullMovie = ({ movie }) => {
     const {
         poster_path,
         vote_average,
@@ -62,3 +63,9 @@ export default ({ movie }) => {
         </section>
     );
 };
+
+FullMovie.propTypes = {
+    movie: PropTypes.object,
+};
+
+export default React.memo(FullMovie);

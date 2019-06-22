@@ -1,5 +1,6 @@
 import React from 'react';
 import './HandlerLoaders.scss';
+import PropTypes from 'prop-types';
 
 const HandlerLoaders = ({ loading, error, onTryAgain, children }) => {
     return (
@@ -17,6 +18,13 @@ const HandlerLoaders = ({ loading, error, onTryAgain, children }) => {
             {!loading && !error && children}
         </section>
     );
+};
+
+HandlerLoaders.propTypes = {
+    loading: PropTypes.bool,
+    error: PropTypes.bool,
+    onTryAgain: PropTypes.func,
+    children: PropTypes.any,
 };
 
 export default React.memo(HandlerLoaders);
