@@ -3,23 +3,31 @@ import CategoryItem from '../../components/CategoryItem/CategoryItem';
 import { connect } from 'react-redux';
 import { getAll } from '../../redux-app/actions/CategoryAction';
 import './Home.scss';
+import HandlerLoaders from '../../components/HandlerLoaders/HandlerLoaders';
 
 class Home extends React.PureComponent {
-    componentDidMount() {
+    getAll = () => {
         const { getAll } = this.props;
         getAll();
+    };
+
+    componentDidMount() {
+        this.getAll();
     }
 
     render() {
-        const { categories } = this.props;
+        const { categories, loading, error } = this.props;
 
         return (
             <main className="Home">
-                <ul>
-                    {categories.map(category => (
-                        <CategoryItem name="Drama" />
-                    ))}
-                </ul>
+                <HandlerLoaders loading={loading} error={error} onTryAgain={this.getAll}>
+                    <ul className="Home__list">
+                        {categories &&
+                            categories.map(category => (
+                                <CategoryItem key={category.id} id={category.id} name={category.name} />
+                            ))}
+                    </ul>
+                </HandlerLoaders>
             </main>
         );
     }

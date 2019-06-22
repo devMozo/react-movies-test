@@ -23,7 +23,7 @@ export const getAll = () => {
         dispatch(getCategoryStarted());
 
         getAllCategories()
-            .then(data => getCategoryFinished(data))
-            .catch(err => getCategoryFinishedWithError(err));
+            .then(data => dispatch(getCategoryFinished(data)))
+            .catch(err => dispatch(getCategoryFinishedWithError(err)));
     };
 };

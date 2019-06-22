@@ -8,7 +8,7 @@ const getAllCategories = () => {
         },
     })
         .then(response => response.data.genres)
-        .catch(err => err);
+        .catch(err => Promise.reject(err));
 };
 
 export { getAllCategories };
