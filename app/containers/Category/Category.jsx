@@ -5,7 +5,7 @@ import MovieItem from '../../components/MovieItem/MovieItem';
 import { getMovies } from '../../redux-app/actions/MovieByCategoryAction';
 import './Category.scss';
 
-class Category extends React.PureComponent {
+export class Category extends React.PureComponent {
     getMovies = () => {
         const { getMovies, match } = this.props;
         getMovies(match.params.id, 1);

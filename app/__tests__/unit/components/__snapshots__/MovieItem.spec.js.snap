@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MovieItem /> should render correctly in "debug" mode 1`] = `
+<li
+  className="MovieItem"
+>
+  <header
+    className="MovieItem__header"
+  >
+    <picture
+      className="MovieItem__pic"
+    >
+      <img
+        alt="mocked_title"
+        src="https://image.tmdb.org/t/p/w500/poster.jpg"
+      />
+    </picture>
+    <h2>
+       
+      mocked_title
+       
+    </h2>
+  </header>
+  <p>
+     
+    mocked_overview
+     
+  </p>
+  <Link
+    to="/movie/1234"
+  >
+     Go to the movie! 
+  </Link>
+</li>
+`;

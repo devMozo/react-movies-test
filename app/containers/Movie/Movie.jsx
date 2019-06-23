@@ -5,7 +5,7 @@ import FullMovie from '../../components/FullMovie/FullMovie';
 import HandlerLoaders from '../../components/HandlerLoaders/HandlerLoaders';
 import './Movie.scss';
 
-class Movie extends React.PureComponent {
+export class Movie extends React.PureComponent {
     getMovie = () => {
         const { getMovie, match } = this.props;
         getMovie(match.params.id);

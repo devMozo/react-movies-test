@@ -5,7 +5,7 @@ import { getAll } from '../../redux-app/actions/CategoryAction';
 import './Home.scss';
 import HandlerLoaders from '../../components/HandlerLoaders/HandlerLoaders';
 
-class Home extends React.PureComponent {
+export class Home extends React.PureComponent {
     getAll = () => {
         const { getAll } = this.props;
         getAll();

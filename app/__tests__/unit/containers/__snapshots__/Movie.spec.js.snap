@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Movie /> should render correctly in "debug" mode 1`] = `
+<main
+  className="Movie"
+>
+  <Memo(HandlerLoaders)
+    error={false}
+    loading={false}
+    onTryAgain={[Function]}
+  >
+    <Memo(FullMovie)
+      movie={Object {}}
+    />
+  </Memo(HandlerLoaders)>
+</main>
+`;

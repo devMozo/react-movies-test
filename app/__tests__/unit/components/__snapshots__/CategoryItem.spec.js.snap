@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CategoryItem /> should render correctly in "debug" mode 1`] = `
+<section
+  className="CategoryItem"
+>
+  <Link
+    to="/category/1234"
+  >
+     
+    Mocked Name
+     
+  </Link>
+</section>
+`;

@@ -5,9 +5,11 @@
     "main": "index.js",
     "scripts": {
         "bundle": "webpack",
-        "test": "echo \"Error: no test specified\" && exit 1",
         "start": "webpack-dev-server --mode development --open --hot",
-        "build": "webpack --mode production"
+        "build": "webpack --mode production",
+        "test": "jest",
+        "test:watch": "jest --watch",
+        "test:updateSnapshot": "jest --updateSnapshot"
     },
     "repository": {
         "type": "git",
@@ -29,6 +31,28 @@
             "git add"
         ]
     },
+    "jest": {
+        "snapshotSerializers": [
+            "enzyme-to-json/serializer"
+        ],
+        "setupFiles": [
+            "./app/__tests__/setupTests.js"
+        ],
+        "moduleDirectories": [
+            "node_modules",
+            "./"
+        ],
+        "moduleNameMapper": {
+            "^.+\\.(css|less|scss)$": "babel-jest"
+        },
+        "testPathIgnorePatterns": [
+            "<rootDir>/cypress/",
+            "<rootDir>/node_modules/"
+        ],
+        "modulePathIgnorePatterns": [
+            "<rootDir>/app/__tests__/setupTests.js"
+        ]
+    },
     "homepage": "https://github.com/devMozo/react-movies-test#readme",
     "devDependencies": {
         "@babel/core": "^7.4.5",
@@ -37,14 +61,20 @@
         "@babel/preset-env": "^7.4.5",
         "@babel/preset-react": "^7.0.0",
         "babel-eslint": "^10.0.2",
+        "babel-jest": "^24.8.0",
         "babel-loader": "^8.0.6",
         "css-loader": "^3.0.0",
+        "enzyme": "^3.10.0",
+        "enzyme-adapter-react-16": "^1.14.0",
+        "enzyme-to-json": "^3.3.5",
         "eslint": "^5.16.0",
         "eslint-config-prettier": "^5.0.0",
         "eslint-plugin-prettier": "^3.1.0",
         "html-webpack-plugin": "^3.2.0",
+        "jest": "^24.8.0",
         "node-sass": "^4.12.0",
         "prettier": "^1.18.2",
+        "redux-mock-store": "^1.5.3",
         "sass-loader": "^7.1.0",
         "style-loader": "^0.23.1",
         "tslint": "^5.17.0",
