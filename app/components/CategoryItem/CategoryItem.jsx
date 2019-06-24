@@ -5,8 +5,11 @@ import './CategoryItem.scss';
 
 const CategoryItem = ({ name, id }) => {
     return (
-        <section className="CategoryItem">
-            <Link to={`/category/${id}`}> {name} </Link>
+        <section className="CategoryItem" data-cy="CategoryItem">
+            <Link to={`/category/${id}`} data-cy="CategoryItem-link">
+                {' '}
+                {name}{' '}
+            </Link>
         </section>
     );
 };

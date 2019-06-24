@@ -4,6 +4,8 @@ import './Header.scss';
 
 export default () => (
     <header className="Header">
-        <Link to="/">Home</Link>
+        <Link to="/" data-cy="HeaderHome-link">
+            Home
+        </Link>
     </header>
 );

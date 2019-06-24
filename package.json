@@ -9,7 +9,8 @@
         "build": "webpack --mode production",
         "test": "jest",
         "test:watch": "jest --watch",
-        "test:updateSnapshot": "jest --updateSnapshot"
+        "test:updateSnapshot": "jest --updateSnapshot",
+        "test:cypress": "npm run start | cypress open"
     },
     "repository": {
         "type": "git",
@@ -64,6 +65,7 @@
         "babel-jest": "^24.8.0",
         "babel-loader": "^8.0.6",
         "css-loader": "^3.0.0",
+        "cypress": "^3.3.1",
         "enzyme": "^3.10.0",
         "enzyme-adapter-react-16": "^1.14.0",
         "enzyme-to-json": "^3.3.5",

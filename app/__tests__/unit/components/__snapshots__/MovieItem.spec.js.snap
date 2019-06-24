@@ -3,6 +3,7 @@
 exports[`<MovieItem /> should render correctly in "debug" mode 1`] = `
 <li
   className="MovieItem"
+  data-cy="MovieItem"
 >
   <header
     className="MovieItem__header"
@@ -27,9 +28,12 @@ exports[`<MovieItem /> should render correctly in "debug" mode 1`] = `
      
   </p>
   <Link
+    data-cy="MovieItem-link"
     to="/movie/1234"
   >
-     Go to the movie! 
+     
+    Go to the movie!
+     
   </Link>
 </li>
 `;

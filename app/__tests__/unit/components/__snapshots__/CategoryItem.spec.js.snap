@@ -3,8 +3,10 @@
 exports[`<CategoryItem /> should render correctly in "debug" mode 1`] = `
 <section
   className="CategoryItem"
+  data-cy="CategoryItem"
 >
   <Link
+    data-cy="CategoryItem-link"
     to="/category/1234"
   >
      

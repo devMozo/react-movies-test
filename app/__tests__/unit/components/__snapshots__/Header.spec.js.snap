@@ -5,6 +5,7 @@ exports[`<Header /> should render correctly in "debug" mode 1`] = `
   className="Header"
 >
   <Link
+    data-cy="HeaderHome-link"
     to="/"
   >
     Home

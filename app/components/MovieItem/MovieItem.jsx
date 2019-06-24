@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 
 const MovieItem = ({ id, title, posterPath, overview }) => {
     return (
-        <li className="MovieItem">
+        <li className="MovieItem" data-cy="MovieItem">
             <header className="MovieItem__header">
                 <picture className="MovieItem__pic">
                     <img src={MOVIES_IMG_PATH + posterPath} alt={title} />
@@ -14,7 +14,10 @@ const MovieItem = ({ id, title, posterPath, overview }) => {
                 <h2> {title} </h2>
             </header>
             <p> {overview} </p>
-            <Link to={`/movie/${id}`}> Go to the movie! </Link>
+            <Link to={`/movie/${id}`} data-cy="MovieItem-link">
+                {' '}
+                Go to the movie!{' '}
+            </Link>
         </li>
     );
 };
