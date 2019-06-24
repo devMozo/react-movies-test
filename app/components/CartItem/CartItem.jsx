@@ -9,7 +9,9 @@ const CartItem = ({ item, onRemove }) => {
             <picture>
                 <img src={`${MOVIES_IMG_PATH}${item.poster_path}`} />
             </picture>
-            <Link to={`movie/${item.id}`}>{item.title}</Link>
+            <Link className="CartItem__title" to={`movie/${item.id}`}>
+                {item.title}
+            </Link>
             <b className="CartItem__price"> ${item.budget} </b>
             <button className="CartItem__remove" onClick={() => onRemove(item.id)}>
                 {' '}

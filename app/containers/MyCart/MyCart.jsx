@@ -18,7 +18,7 @@ export class MyCart extends React.PureComponent {
                 {items && items.length > 0 ? (
                     <ul className="MyCart__list">
                         {items.map(item => (
-                            <CartItem item={item} onRemove={this.onRemoveItem} />
+                            <CartItem key={item.id} item={item} onRemove={this.onRemoveItem} />
                         ))}
                     </ul>
                 ) : (

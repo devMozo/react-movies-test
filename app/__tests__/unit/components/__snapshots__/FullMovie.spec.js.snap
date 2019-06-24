@@ -26,7 +26,7 @@ exports[`<FullMovie /> should render correctly in "debug" mode 1`] = `
          
       </h4>
       <button
-        className="FullMovie__add-button"
+        className="FullMovie__button--add"
       >
         Buy Item
       </button>

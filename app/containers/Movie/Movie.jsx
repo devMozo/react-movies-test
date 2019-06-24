@@ -24,7 +24,7 @@ export class Movie extends React.PureComponent {
 
     isAdded = () => {
         const { movie, items } = this.props;
-        return Boolean(items.find(item => item.id === movie.id));
+        return Boolean(items && items.find(item => item.id === movie.id));
     };
 
     componentDidMount() {

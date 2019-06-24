@@ -10,8 +10,10 @@ exports[`<Movie /> should render correctly in "debug" mode 1`] = `
     onTryAgain={[Function]}
   >
     <Memo(FullMovie)
+      added={false}
       movie={Object {}}
       onAdd={[Function]}
+      onRemove={[Function]}
     />
   </Memo(HandlerLoaders)>
 </main>

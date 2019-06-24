@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CartItem /> should render correctly in "debug" mode 1`] = `
+<li
+  className="CartItem"
+>
+  <picture>
+    <img
+      src="https://image.tmdb.org/t/p/w500/mocked_poster"
+    />
+  </picture>
+  <Link
+    className="CartItem__title"
+    to="movie/undefined"
+  >
+    mocked_title
+  </Link>
+  <b
+    className="CartItem__price"
+  >
+     $
+    123456789
+     
+  </b>
+  <button
+    className="CartItem__remove"
+    onClick={[Function]}
+  >
+     
+    Remove
+     
+  </button>
+</li>
+`;
