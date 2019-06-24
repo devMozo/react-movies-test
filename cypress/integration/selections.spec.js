@@ -32,9 +32,7 @@ context('Selections', () => {
             .within(() => {
                 cy.get('[data-cy=CategoryItem-link]').click();
             });
-    });
 
-    it('See a movie', () => {
         cy.wait('@getMovies');
 
         cy.get('[data-cy=MovieItem]')
@@ -44,6 +42,26 @@ context('Selections', () => {
             });
 
         cy.wait('@getUnitMovie');
+    });
+
+    it('Buy and remove a movie', () => {
+        cy.get('[data-cy=FullMovie_add]')
+            .should('contain', 'Buy Item')
+            .click()
+            .should('contain', 'Remove Item')
+            .click()
+            .should('contain', 'Buy Item');
+    });
+
+    it('Check the cart when an item was added', () => {
+        cy.get('[data-cy=FullMovie_add]')
+            .should('contain', 'Buy Item')
+            .trigger('click')
+            .should('contain', 'Remove Item');
+
+        cy.get('[data-cy=HeaderCart-link]').click();
+
+        cy.get('[data-cy=CartItem]').should('have.length', 1);
     });
 
     it('Go to the home', () => {

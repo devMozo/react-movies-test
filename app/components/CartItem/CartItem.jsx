@@ -5,7 +5,7 @@ import './CartItem.scss';
 
 const CartItem = ({ item, onRemove }) => {
     return (
-        <li className="CartItem">
+        <li className="CartItem" data-cy={'CartItem'}>
             <picture>
                 <img src={`${MOVIES_IMG_PATH}${item.poster_path}`} />
             </picture>

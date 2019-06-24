@@ -27,11 +27,11 @@ const FullMovie = ({ movie, onAdd, onRemove, added }) => {
                     <h2> {title} </h2>
                     <h4> Rating: {vote_average} </h4>
                     {added ? (
-                        <button className="FullMovie__button--remove" onClick={onRemove}>
+                        <button className="FullMovie__button--remove" data-cy="FullMovie_remove" onClick={onRemove}>
                             Remove Item
                         </button>
                     ) : (
-                        <button className="FullMovie__button--add" onClick={onAdd}>
+                        <button className="FullMovie__button--add" data-cy="FullMovie_add" onClick={onAdd}>
                             Buy Item
                         </button>
                     )}
