@@ -7,5 +7,8 @@ export default () => (
         <Link to="/" data-cy="HeaderHome-link">
             Home
         </Link>
+        <Link to="/mycart" data-cy="HeaderCart-link">
+            My Cart
+        </Link>
     </header>
 );

@@ -3,7 +3,7 @@ import { MOVIES_IMG_PATH } from '../../constants/config';
 import PropTypes from 'prop-types';
 import './FullMovie.scss';
 
-const FullMovie = ({ movie }) => {
+const FullMovie = ({ movie, onAdd, onRemove, added }) => {
     const {
         poster_path,
         vote_average,
@@ -26,6 +26,15 @@ const FullMovie = ({ movie }) => {
                 <section className="FullMovie__info">
                     <h2> {title} </h2>
                     <h4> Rating: {vote_average} </h4>
+                    {added ? (
+                        <button className="FullMovie__button--remove" onClick={onRemove}>
+                            Remove Item
+                        </button>
+                    ) : (
+                        <button className="FullMovie__button--add" onClick={onAdd}>
+                            Buy Item
+                        </button>
+                    )}
                 </section>
             </header>
             <section className="FullMovie__description">

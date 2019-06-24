@@ -19,6 +19,27 @@
             margin-right: 40px;
             box-shadow: 0 0 10px #000;
         }
+
+        .FullMovie__button--remove,
+        .FullMovie__button--add {
+            padding: 10px 30px;
+            color: white;
+            border: 0;
+            transition: 0.3s;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+
+        .FullMovie__button--add {
+            background-color: #cddc39;
+        }
+
+        .FullMovie__button--remove {
+            background-color: #ff3d00;
+        }
     }
 
     h3 {

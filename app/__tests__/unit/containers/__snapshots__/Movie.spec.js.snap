@@ -11,6 +11,7 @@ exports[`<Movie /> should render correctly in "debug" mode 1`] = `
   >
     <Memo(FullMovie)
       movie={Object {}}
+      onAdd={[Function]}
     />
   </Memo(HandlerLoaders)>
 </main>

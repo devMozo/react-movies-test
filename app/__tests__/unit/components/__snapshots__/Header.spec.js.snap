@@ -10,5 +10,11 @@ exports[`<Header /> should render correctly in "debug" mode 1`] = `
   >
     Home
   </Link>
+  <Link
+    data-cy="HeaderCart-link"
+    to="/mycart"
+  >
+    My Cart
+  </Link>
 </header>
 `;
